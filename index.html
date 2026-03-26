@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -867,10 +867,10 @@ kbd {
     <div class="tag">Design System v1.0</div>
   </div>
   <nav class="sidebar-nav">
-    <div class="nav-section-label">Fundação</div>
-    <a class="nav-item active" onclick="show('tokens')">🎨 Tokens de Cor</a>
-    <a class="nav-item" onclick="show('spacing')">📐 Espaçamento</a>
-    <a class="nav-item" onclick="show('typography')">Aa Tipografia · Segoe UI</a>
+    <div class="nav-section-label">Foundation</div>
+    <a class="nav-item active" onclick="show('tokens')">🎨 Color Tokens</a>
+    <a class="nav-item" onclick="show('spacing')">📐 Spacing</a>
+    <a class="nav-item" onclick="show('typography')">Aa Typography · Segoe UI</a>
 
     <div class="nav-section-label">Inputs</div>
     <a class="nav-item" onclick="show('buttons')">Button</a>
@@ -900,12 +900,12 @@ kbd {
     <a class="nav-item" onclick="show('tooltip')">Tooltip</a>
     <a class="nav-item" onclick="show('popover')">Popover</a>
 
-    <div class="nav-section-label">Compostos</div>
+    <div class="nav-section-label">Composite</div>
     <a class="nav-item" onclick="show('stats')">Stat Cards</a>
     <a class="nav-item" onclick="show('chips')">Chip / Kbd</a>
     <a class="nav-item" onclick="show('code')">Code Block</a>
   </nav>
-  <div class="sidebar-footer">Isla Startup · 2024</div>
+  <div class="sidebar-footer">Isla · Content Operations SaaS</div>
 </aside>
 
 <!-- MAIN CONTENT -->
@@ -914,29 +914,29 @@ kbd {
 <!-- ─ TOKENS ──────────────────────────────────────── -->
 <section class="section active" id="sec-tokens">
   <div class="section-header">
-    <h1>Tokens de Cor</h1>
-    <p>Paleta primitiva e tokens semânticos. Clique em qualquer swatch para copiar o hex.</p>
+    <h1>Color Tokens</h1>
+    <p>Primitive palette and semantic tokens — content states, AI feedback and system states. Click any swatch to copy the hex.</p>
   </div>
 
   <div class="block">
-    <div class="block-title">Isla Blue — cor principal</div>
+    <div class="block-title">Isla Blue — brand primary</div>
     <div class="swatches" id="sw-blue"></div>
   </div>
   <div class="block">
-    <div class="block-title">Grey — neutros</div>
+    <div class="block-title">Grey — neutrals</div>
     <div class="swatches" id="sw-grey"></div>
   </div>
   <div class="grid-2">
     <div class="block">
-      <div class="block-title">Red</div>
+      <div class="block-title">Red — error states</div>
       <div class="swatches" id="sw-red"></div>
     </div>
     <div class="block">
-      <div class="block-title">Green</div>
+      <div class="block-title">Green — success states</div>
       <div class="swatches" id="sw-green"></div>
     </div>
     <div class="block">
-      <div class="block-title">Yellow</div>
+      <div class="block-title">Yellow — warning</div>
       <div class="swatches" id="sw-yellow"></div>
     </div>
     <div class="block">
@@ -945,201 +945,187 @@ kbd {
     </div>
   </div>
   <div class="block" style="margin-top:32px">
-    <div class="block-title">Tokens Semânticos</div>
+    <div class="block-title">Semantic Tokens</div>
     <div class="semantic-grid" id="sem-grid"></div>
   </div>
 </section>
 
 <!-- ─ SPACING ─────────────────────────────────────── -->
 <section class="section" id="sec-spacing">
-  <div class="section-header"><h1>Espaçamento &amp; Radius</h1><p>Escala de 4px base para espaçamento e tokens de border-radius.</p></div>
-  <div class="block"><div class="block-title">Spacing Primitivos</div><div id="spacing-list"></div></div>
-  <div class="block"><div class="block-title">Padding Semântico</div><div id="padding-list"></div></div>
+  <div class="section-header"><h1>Spacing &amp; Radius</h1><p>4px base scale — used across the post editor, Content HUB cards and calendar layout.</p></div>
+  <div class="block"><div class="block-title">Primitive Spacing</div><div id="spacing-list"></div></div>
+  <div class="block"><div class="block-title">Semantic Padding</div><div id="padding-list"></div></div>
   <div class="block"><div class="block-title">Border Radius</div><div class="radius-grid" id="radius-grid"></div></div>
 </section>
 
 <!-- ─ TYPOGRAPHY ──────────────────────────────────── -->
 <section class="section" id="sec-typography">
   <div class="section-header">
-    <h1>Tipografia</h1>
-    <p>Estilos de texto exportados do Figma (📦 Product) — fonte <strong>Segoe UI</strong>.</p>
+    <h1>Typography</h1>
+    <p>Text styles exported from Figma (📦 Product) — <strong>Segoe UI</strong> font family.</p>
   </div>
 
-  <!-- Table -->
   <div class="block canvas" style="margin-bottom:16px">
-    <div class="block-title">Escala de estilos</div>
+    <div class="block-title">Type scale</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Token</th><th>Família</th><th>Size</th><th>Weight</th><th>Amostra</th></tr></thead>
+        <thead><tr><th>Token</th><th>Family</th><th>Size</th><th>Weight</th><th>Sample</th></tr></thead>
         <tbody>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H1</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">32px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:22px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Gestão de docs</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H2</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">24px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:19px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Configurações</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H3</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">22px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:17px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Detalhes do perfil</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H4</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">20px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:16px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Documentos recentes</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Extra Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">18px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:15px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Resumo do contrato</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">16px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Nome do signatário</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/Medium/Semibold</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Prazo de assinatura</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/Medium/Regular</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-outline">Regular</span></td><td><span style="font-size:14px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif">Texto corrido do documento</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/LABEL/Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:12px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.05em;color:var(--sem-text-subtle)">TIPO DE DOCUMENTO</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/LABEL/Medium</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">12px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:11px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--sem-text-subtle)">STATUS · DATA</span></td></tr>
-          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Small</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">12px</span></td><td><span class="badge badge-outline">Regular</span></td><td><span style="font-size:12px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;color:var(--sem-text-subtle)">Última atualização: 12 mar 2024</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H1</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">32px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:22px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Content that converts</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H2</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">24px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:19px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Content HUB</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H3</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">22px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:17px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Pending approvals</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/H4</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">20px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:16px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Recent posts</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Extra Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">18px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:15px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">AI suggestion</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">16px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Scheduled for March 28</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/Medium/Semibold</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif">Post deadline</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/Medium/Regular</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-outline">Regular</span></td><td><span style="font-size:14px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif">Body copy for the post</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/LABEL/Large</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">14px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:12px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.05em;color:var(--sem-text-subtle)">Content status</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/LABEL/Medium</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">12px</span></td><td><span class="badge badge-primary">Semibold</span></td><td><span style="font-size:11px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--sem-text-subtle)">AUTHOR · CHANNEL · DATE</span></td></tr>
+          <tr><td><span style="font-family:var(--font-mono);font-size:11px;color:var(--sem-info)">HEADING/BODY/Small</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Segoe UI</td><td><span class="badge badge-default">12px</span></td><td><span class="badge badge-outline">Regular</span></td><td><span style="font-size:12px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;color:var(--sem-text-subtle)">Last edited 3 minutes ago</span></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Live preview -->
   <div class="block canvas">
-    <div class="block-title">Preview em contexto</div>
+    <div class="block-title">Live preview</div>
     <div style="padding:8px 0">
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/H1 · 32px · Semibold</span>
-        <div style="font-size:32px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.2;margin-top:8px;color:var(--isla-950)">Gestão de Documentos da Isla</div>
+        <div style="font-size:32px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.2;margin-top:8px;color:var(--isla-950)">Plan, create and publish with AI</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/H2 · 24px · Semibold</span>
-        <div style="font-size:24px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.3;margin-top:8px;color:var(--isla-950)">Configurações da conta</div>
+        <div style="font-size:24px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.3;margin-top:8px;color:var(--isla-950)">Content HUB — all posts</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/H3 · 22px · Semibold</span>
-        <div style="font-size:22px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.3;margin-top:8px;color:var(--isla-950)">Detalhes do perfil</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.3;margin-top:8px;color:var(--isla-950)">Publishing calendar</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/H4 · 20px · Semibold</span>
-        <div style="font-size:20px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.4;margin-top:8px;color:var(--isla-950)">Documentos recentes</div>
+        <div style="font-size:20px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.4;margin-top:8px;color:var(--isla-950)">Posts awaiting approval</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/BODY/Extra Large · 18px · Semibold</span>
-        <div style="font-size:18px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.4;margin-top:8px">Resumo do contrato</div>
+        <div style="font-size:18px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.4;margin-top:8px">LinkedIn post editor</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/BODY/Large · 16px · Semibold</span>
-        <div style="font-size:16px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;margin-top:8px">Nome do signatário</div>
+        <div style="font-size:16px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;margin-top:8px">AI-generated suggestion</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/Medium/Semibold · 14px · Semibold</span>
-        <div style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;margin-top:8px">Prazo de assinatura: 28 de março de 2024</div>
+        <div style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;margin-top:8px">Scheduled for March 28, 9:00 AM</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/Medium/Regular · 14px · Regular</span>
-        <div style="font-size:14px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7;margin-top:8px;max-width:560px;color:var(--sem-text)">A plataforma Isla centraliza seus documentos e automatiza processos repetitivos, permitindo que sua equipe foque no que realmente importa. Acesse tudo com segurança e eficiência.</div>
+        <div style="font-size:14px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7;margin-top:8px;max-width:560px;color:var(--sem-text)">Isla centralizes the entire content lifecycle — from creation to publishing — with AI built-in for marketing teams operating at scale on LinkedIn.</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/LABEL/Large · 14px · Semibold</span>
-        <div style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.04em;margin-top:8px;color:var(--sem-text-subtle)">Tipo de Documento</div>
+        <div style="font-size:14px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.04em;margin-top:8px;color:var(--sem-text-subtle)">Content status</div>
       </div>
-
       <div style="margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--sem-border)">
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/LABEL/Medium · 12px · Semibold</span>
-        <div style="font-size:12px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:8px;color:var(--sem-text-subtle)">Status · Última Atualização · Responsável</div>
+        <div style="font-size:12px;font-weight:600;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:8px;color:var(--sem-text-subtle)">Author · Channel · Published date</div>
       </div>
-
       <div>
         <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-350);font-family:var(--font-mono)">HEADING/BODY/Small · 12px · Regular</span>
-        <div style="font-size:12px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;margin-top:8px;color:var(--sem-text-subtle)">Última atualização: 12 de março de 2024 · Versão 2.4.1 · Exportado do Figma 📦 Product</div>
+        <div style="font-size:12px;font-weight:400;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6;margin-top:8px;color:var(--sem-text-subtle)">Edited by Ana Vieira · 3 minutes ago · v2.4.1 · 📦 Product</div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ─ BUTTONS ─────────────────────────────────────── -->
 <section class="section" id="sec-buttons">
-  <div class="section-header"><h1>Button</h1><p>Variantes, tamanhos e estados.</p></div>
+  <div class="section-header"><h1>Button</h1><p>Variants, sizes and states — used across the create, review and publish workflow.</p></div>
   <div class="block canvas">
-    <div class="block-title">Variantes</div>
+    <div class="block-title">Variants</div>
     <div class="demo-row">
-      <button class="btn btn-md btn-primary">Primary</button>
-      <button class="btn btn-md btn-secondary">Secondary</button>
-      <button class="btn btn-md btn-outline">Outline</button>
-      <button class="btn btn-md btn-ghost">Ghost</button>
-      <button class="btn btn-md btn-destructive">Destructive</button>
-      <button class="btn btn-md btn-link">Link</button>
+      <button class="btn btn-md btn-primary">Publish now</button>
+      <button class="btn btn-md btn-secondary">Save draft</button>
+      <button class="btn btn-md btn-outline">Preview</button>
+      <button class="btn btn-md btn-ghost">Discard</button>
+      <button class="btn btn-md btn-destructive">Delete post</button>
+      <button class="btn btn-md btn-link">View history</button>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
-    <div class="block-title">Tamanhos</div>
+    <div class="block-title">Sizes</div>
     <div class="demo-row" style="align-items:center">
-      <button class="btn btn-sm btn-primary">Small</button>
-      <button class="btn btn-md btn-primary">Medium</button>
-      <button class="btn btn-lg btn-primary">Large</button>
+      <button class="btn btn-sm btn-primary">Approve</button>
+      <button class="btn btn-md btn-primary">Send for review</button>
+      <button class="btn btn-lg btn-primary">Create new post</button>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
-    <div class="block-title">Com ícone</div>
+    <div class="block-title">With icon</div>
     <div class="demo-row">
       <button class="btn btn-md btn-primary">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Novo documento
+        New post
       </button>
       <button class="btn btn-md btn-outline">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download
-      </button>
-      <button class="btn btn-md btn-ghost">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Buscar
+        Search content
       </button>
-      <button class="btn btn-icon btn-outline" title="Configurações">
+      <button class="btn btn-md btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Generate with AI
+      </button>
+      <button class="btn btn-icon btn-outline" title="Workspace settings">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
       </button>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
-    <div class="block-title">Estados</div>
+    <div class="block-title">Disabled states</div>
     <div class="demo-row">
-      <button class="btn btn-md btn-primary" disabled>Disabled</button>
-      <button class="btn btn-md btn-secondary" disabled>Disabled</button>
-      <button class="btn btn-md btn-outline" disabled>Disabled</button>
+      <button class="btn btn-md btn-primary" disabled>Publish now</button>
+      <button class="btn btn-md btn-secondary" disabled>Save draft</button>
+      <button class="btn btn-md btn-outline" disabled>Preview</button>
     </div>
   </div>
 </section>
 
 <!-- ─ INPUTS ──────────────────────────────────────── -->
 <section class="section" id="sec-inputs">
-  <div class="section-header"><h1>Input / Textarea</h1><p>Campos de texto com estados, variantes e grupos.</p></div>
+  <div class="section-header"><h1>Input / Textarea</h1><p>Fields used in the post editor, onboarding and workspace settings.</p></div>
   <div class="grid-2">
     <div class="canvas">
       <div class="block-title">Default</div>
-      <div class="field"><label class="field-label">Email</label><input class="input" type="email" placeholder="voce@isla.com.br"><p class="field-hint">Usaremos seu email para notificações.</p></div>
+      <div class="field"><label class="field-label">Post title</label><input class="input" type="text" placeholder="e.g. 3 AI trends every marketer should know..."><p class="field-hint">Used as internal reference in the Content HUB.</p></div>
     </div>
     <div class="canvas">
-      <div class="block-title">Estado de erro</div>
-      <div class="field"><label class="field-label">Senha</label><input class="input error" type="password" value="123"><p class="field-error-msg">A senha precisa ter no mínimo 8 caracteres.</p></div>
+      <div class="block-title">Error state</div>
+      <div class="field"><label class="field-label">Publish date</label><input class="input error" type="text" value="32/13/2024"><p class="field-error-msg">Invalid date. Please use DD/MM/YYYY format.</p></div>
     </div>
     <div class="canvas">
-      <div class="block-title">Desabilitado</div>
-      <div class="field"><label class="field-label">CNPJ</label><input class="input" disabled value="12.345.678/0001-99"></div>
+      <div class="block-title">Disabled</div>
+      <div class="field"><label class="field-label">Author</label><input class="input" disabled value="Ana Vieira (you)"></div>
     </div>
     <div class="canvas">
-      <div class="block-title">Textarea</div>
-      <div class="field"><label class="field-label">Descrição</label><textarea class="textarea" placeholder="Descreva o documento..."></textarea></div>
+      <div class="block-title">Textarea — post body</div>
+      <div class="field"><label class="field-label">Content</label><textarea class="textarea" placeholder="Write or paste your post here. AI can help refine it..."></textarea></div>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
     <div class="block-title">Input Group</div>
     <div class="demo-col" style="max-width:480px">
       <div>
-        <p class="field-label" style="margin-bottom:6px">Com prefixo</p>
+        <p class="field-label" style="margin-bottom:6px">LinkedIn profile URL</p>
         <div class="flex" style="width:100%">
-          <span class="input-addon input-addon-left">https://</span>
-          <input class="input" placeholder="isla.com.br" style="border-radius:0 var(--r-md) var(--r-md) 0;border-left:none">
+          <span class="input-addon input-addon-left">linkedin.com/in/</span>
+          <input class="input" placeholder="ana-vieira" style="border-radius:0 var(--r-md) var(--r-md) 0;border-left:none">
         </div>
       </div>
       <div>
-        <p class="field-label" style="margin-bottom:6px">Com botão</p>
+        <p class="field-label" style="margin-bottom:6px">Search the Content HUB</p>
         <div class="input-group">
-          <input class="input" placeholder="Buscar documentos...">
-          <button class="btn btn-primary" style="border-radius:0 var(--r-md) var(--r-md) 0;height:40px">Buscar</button>
+          <input class="input" placeholder="Search posts, drafts, approved...">
+          <button class="btn btn-primary" style="border-radius:0 var(--r-md) var(--r-md) 0;height:40px">Search</button>
         </div>
       </div>
     </div>
@@ -1148,27 +1134,30 @@ kbd {
 
 <!-- ─ SELECT ──────────────────────────────────────── -->
 <section class="section" id="sec-select">
-  <div class="section-header"><h1>Select / Slider</h1><p>Seleção e controles de range.</p></div>
+  <div class="section-header"><h1>Select / Slider</h1><p>Content HUB filters, permission settings and editor controls.</p></div>
   <div class="grid-2">
     <div class="canvas">
       <div class="block-title">Select</div>
       <div class="field">
-        <label class="field-label">Tipo de documento</label>
+        <label class="field-label">Content status</label>
         <select class="select-input input">
-          <option value="">Selecione...</option>
-          <option>Contrato</option><option>Proposta</option>
-          <option>Relatório</option><option>Nota Fiscal</option>
+          <option value="">Filter by status...</option>
+          <option>Draft</option>
+          <option>For review</option>
+          <option>Approved</option>
+          <option>Ready to publish</option>
+          <option>Published</option>
         </select>
       </div>
     </div>
     <div class="canvas">
-      <div class="block-title">Slider / Range</div>
+      <div class="block-title">Slider — AI tone of voice</div>
       <div class="field">
-        <label class="field-label">Nível de acesso: <span id="range-val">5</span></label>
+        <label class="field-label">Tone of voice: <span id="range-val">5</span>/10</label>
         <input class="range-input" type="range" min="1" max="10" value="5" id="range-slider">
         <div class="flex" style="justify-content:space-between;margin-top:4px">
-          <span class="text-sm text-subtle">Restrito</span>
-          <span class="text-sm text-subtle">Total</span>
+          <span class="text-sm text-subtle">Formal</span>
+          <span class="text-sm text-subtle">Casual</span>
         </div>
       </div>
     </div>
@@ -1177,23 +1166,23 @@ kbd {
 
 <!-- ─ CHECKBOX ────────────────────────────────────── -->
 <section class="section" id="sec-checkbox">
-  <div class="section-header"><h1>Checkbox / Radio</h1></div>
+  <div class="section-header"><h1>Checkbox / Radio</h1><p>Bulk selection in Content HUB and role/permission assignment.</p></div>
   <div class="grid-2">
     <div class="canvas">
-      <div class="block-title">Checkbox</div>
+      <div class="block-title">Bulk post selection</div>
       <div class="demo-col">
-        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" checked><span class="checkbox-label">Termos de uso</span></label>
-        <label class="checkbox-wrap"><input type="checkbox" class="checkbox"><span class="checkbox-label">Receber novidades</span></label>
-        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" disabled><span class="checkbox-label" style="opacity:.5">Opção bloqueada</span></label>
-        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" checked disabled><span class="checkbox-label" style="opacity:.5">Selecionado bloqueado</span></label>
+        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" checked><span class="checkbox-label">How AI is changing marketing</span></label>
+        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" checked><span class="checkbox-label">5 mistakes that kill your LinkedIn reach</span></label>
+        <label class="checkbox-wrap"><input type="checkbox" class="checkbox"><span class="checkbox-label">Behind the scenes of our product culture</span></label>
+        <label class="checkbox-wrap"><input type="checkbox" class="checkbox" disabled><span class="checkbox-label" style="opacity:.5">Private post (no permission)</span></label>
       </div>
     </div>
     <div class="canvas">
-      <div class="block-title">Radio</div>
+      <div class="block-title">Workspace role</div>
       <div class="demo-col">
-        <label class="radio-wrap"><input type="radio" name="plan" class="radio" checked><span class="checkbox-label">Plano Básico</span></label>
-        <label class="radio-wrap"><input type="radio" name="plan" class="radio"><span class="checkbox-label">Plano Pro</span></label>
-        <label class="radio-wrap"><input type="radio" name="plan" class="radio"><span class="checkbox-label">Plano Enterprise</span></label>
+        <label class="radio-wrap"><input type="radio" name="role" class="radio" checked><span class="checkbox-label">Content Manager</span></label>
+        <label class="radio-wrap"><input type="radio" name="role" class="radio"><span class="checkbox-label">Creator / Copywriter</span></label>
+        <label class="radio-wrap"><input type="radio" name="role" class="radio"><span class="checkbox-label">Stakeholder / Approver</span></label>
       </div>
     </div>
   </div>
@@ -1201,25 +1190,29 @@ kbd {
 
 <!-- ─ TOGGLE ──────────────────────────────────────── -->
 <section class="section" id="sec-toggle">
-  <div class="section-header"><h1>Toggle / Switch</h1></div>
+  <div class="section-header"><h1>Toggle / Switch</h1><p>Workspace preferences, notification and publishing settings.</p></div>
   <div class="canvas">
-    <div class="block-title">Toggle</div>
-    <div class="demo-col" style="max-width:300px">
+    <div class="block-title">Preferences</div>
+    <div class="demo-col" style="max-width:340px">
       <div class="flex items-center gap12">
         <div class="toggle-track on" onclick="toggleSwitch(this)"><div class="toggle-thumb"></div></div>
-        <span style="font-size:14px">Notificações ativas</span>
+        <span style="font-size:14px">Notify on approval</span>
+      </div>
+      <div class="flex items-center gap12">
+        <div class="toggle-track on" onclick="toggleSwitch(this)"><div class="toggle-thumb"></div></div>
+        <span style="font-size:14px">AI enabled in editor</span>
       </div>
       <div class="flex items-center gap12">
         <div class="toggle-track" onclick="toggleSwitch(this)"><div class="toggle-thumb"></div></div>
-        <span style="font-size:14px">Modo escuro</span>
+        <span style="font-size:14px">Auto-publish on approval</span>
       </div>
       <div class="flex items-center gap12">
-        <div class="toggle-track on" onclick="toggleSwitch(this)"><div class="toggle-thumb"></div></div>
-        <span style="font-size:14px">Acesso por biometria</span>
+        <div class="toggle-track" onclick="toggleSwitch(this)"><div class="toggle-thumb"></div></div>
+        <span style="font-size:14px">AI inline suggestions</span>
       </div>
       <div class="flex items-center gap12">
         <div class="toggle-track" style="opacity:.4"><div class="toggle-thumb"></div></div>
-        <span style="font-size:14px;opacity:.5">Desabilitado</span>
+        <span style="font-size:14px;opacity:.5">LinkedIn integration (not connected)</span>
       </div>
     </div>
   </div>
@@ -1227,73 +1220,73 @@ kbd {
 
 <!-- ─ BADGE ───────────────────────────────────────── -->
 <section class="section" id="sec-badge">
-  <div class="section-header"><h1>Badge / Tag</h1></div>
+  <div class="section-header"><h1>Badge / Tag</h1><p>Visual representation of content states — the core primitive of Isla's interface.</p></div>
   <div class="block canvas">
-    <div class="block-title">Badges</div>
+    <div class="block-title">Content states</div>
     <div class="demo-row" style="flex-wrap:wrap">
-      <span class="badge badge-default">Default</span>
-      <span class="badge badge-primary">Primary</span>
-      <span class="badge badge-success">Sucesso</span>
-      <span class="badge badge-warning">Atenção</span>
-      <span class="badge badge-error">Erro</span>
-      <span class="badge badge-info">Info</span>
-      <span class="badge badge-outline">Outline</span>
+      <span class="badge badge-default">No status</span>
+      <span class="badge badge-info">Draft</span>
+      <span class="badge badge-warning">For review</span>
+      <span class="badge badge-primary">Approved</span>
+      <span class="badge badge-success">Ready to publish</span>
+      <span class="badge badge-outline">Published</span>
+      <span class="badge badge-error">Rejected</span>
     </div>
     <div class="demo-row" style="margin-top:12px;flex-wrap:wrap">
-      <span class="badge badge-success badge-dot">Online</span>
-      <span class="badge badge-error badge-dot">Offline</span>
-      <span class="badge badge-warning badge-dot">Pendente</span>
+      <span class="badge badge-success badge-dot">AI active</span>
+      <span class="badge badge-warning badge-dot">Generating...</span>
+      <span class="badge badge-info badge-dot">Refining</span>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
-    <div class="block-title">Tags</div>
+    <div class="block-title">Channel &amp; category tags</div>
     <div class="demo-row">
-      <span class="tag tag-blue">Contrato</span>
-      <span class="tag tag-green">Aprovado</span>
-      <span class="tag tag-red">Rejeitado</span>
-      <span class="tag tag-yellow">Em análise</span>
+      <span class="tag tag-blue">LinkedIn</span>
+      <span class="tag tag-green">Approved</span>
+      <span class="tag tag-red">Rejected</span>
+      <span class="tag tag-yellow">Scheduled</span>
     </div>
   </div>
 </section>
 
 <!-- ─ ALERT ───────────────────────────────────────── -->
 <section class="section" id="sec-alert">
-  <div class="section-header"><h1>Alert</h1></div>
+  <div class="section-header"><h1>Alert</h1><p>Contextual feedback for content workflow actions: approval, publish errors and deadline warnings.</p></div>
   <div class="demo-col">
-    <div class="alert alert-info"><span class="alert-icon">ℹ</span><div><p class="alert-title">Dica de uso</p><p>Você pode importar documentos nos formatos PDF, DOCX e XLSX.</p></div></div>
-    <div class="alert alert-success"><span class="alert-icon">✓</span><div><p class="alert-title">Salvo com sucesso</p><p>Suas alterações foram salvas e o documento foi atualizado.</p></div></div>
-    <div class="alert alert-warning"><span class="alert-icon">⚠</span><div><p class="alert-title">Atenção necessária</p><p>Este documento expira em 7 dias. Renove antes do vencimento.</p></div></div>
-    <div class="alert alert-error"><span class="alert-icon">✕</span><div><p class="alert-title">Erro ao processar</p><p>Não foi possível enviar o arquivo. Verifique o formato e tente novamente.</p></div></div>
+    <div class="alert alert-info"><span class="alert-icon">ℹ</span><div><p class="alert-title">Post in review</p><p>Ana Vieira sent "How AI is changing marketing" for approval. Review and approve or request edits.</p></div></div>
+    <div class="alert alert-success"><span class="alert-icon">✓</span><div><p class="alert-title">Published successfully</p><p>Your post went live on LinkedIn at 9:00 AM. Track performance in the analytics panel.</p></div></div>
+    <div class="alert alert-warning"><span class="alert-icon">⚠</span><div><p class="alert-title">Upcoming scheduled posts</p><p>You have 3 posts scheduled for today. Make sure all are approved before 8:30 AM.</p></div></div>
+    <div class="alert alert-error"><span class="alert-icon">✕</span><div><p class="alert-title">Publish failed</p><p>Could not publish to LinkedIn. Please reconnect your account and try again.</p></div></div>
   </div>
 </section>
 
 <!-- ─ PROGRESS ────────────────────────────────────── -->
 <section class="section" id="sec-progress">
-  <div class="section-header"><h1>Progress</h1></div>
+  <div class="section-header"><h1>Progress</h1><p>Progress indicators for onboarding, AI generation and the content pipeline status.</p></div>
   <div class="canvas">
     <div class="demo-col">
       <div class="progress-wrap">
-        <div class="progress-labels"><span>Upload de arquivos</span><span>68%</span></div>
+        <div class="progress-labels"><span>AI generating content...</span><span>68%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:68%"></div></div>
       </div>
       <div class="progress-wrap">
-        <div class="progress-labels"><span>Documentos processados</span><span>100%</span></div>
+        <div class="progress-labels"><span>Posts published this month</span><span>100%</span></div>
         <div class="progress-track"><div class="progress-fill success" style="width:100%"></div></div>
       </div>
       <div class="progress-wrap">
-        <div class="progress-labels"><span>Espaço em disco</span><span>85%</span></div>
+        <div class="progress-labels"><span>Approval queue</span><span>85%</span></div>
         <div class="progress-track"><div class="progress-fill warning" style="width:85%"></div></div>
       </div>
       <div class="progress-wrap">
-        <div class="progress-labels"><span>Erros detectados</span><span>23%</span></div>
-        <div class="progress-track"><div class="progress-fill error" style="width:23%"></div></div>
+        <div class="progress-labels"><span>Rejected posts</span><span>12%</span></div>
+        <div class="progress-track"><div class="progress-fill error" style="width:12%"></div></div>
       </div>
       <div class="progress-wrap progress-sm">
-        <div class="progress-labels"><span>Small (4px)</span><span>50%</span></div>
+        <div class="progress-labels"><span>Onboarding complete (sm)</span><span>50%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:50%"></div></div>
       </div>
       <div class="progress-wrap progress-lg">
-        <div class="progress-labels"><span>Large (12px)</span><span>75%</span></div>
+        <div class="progress-labels"><span>Workspace configured (lg)</span><span>75%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:75%"></div></div>
       </div>
     </div>
@@ -1302,24 +1295,24 @@ kbd {
 
 <!-- ─ TOAST ───────────────────────────────────────── -->
 <section class="section" id="sec-toast">
-  <div class="section-header"><h1>Toast</h1></div>
+  <div class="section-header"><h1>Toast</h1><p>Instant feedback for critical workflow actions — approval, rejection, publishing, AI errors.</p></div>
   <div class="canvas">
-    <div class="block-title">Disparar toasts</div>
+    <div class="block-title">Trigger notifications</div>
     <div class="demo-row">
-      <button class="btn btn-md btn-secondary" onclick="showToast('default','Documento salvo','As alterações foram salvas com sucesso.')">Default</button>
-      <button class="btn btn-md btn-secondary" onclick="showToast('success','Enviado!','O contrato foi enviado para assinatura.')">Success</button>
-      <button class="btn btn-md btn-secondary" onclick="showToast('error','Falha no upload','Arquivo maior que 50MB não é suportado.')">Error</button>
-      <button class="btn btn-md btn-secondary" onclick="showToast('warning','Atenção','Sua sessão expira em 5 minutos.')">Warning</button>
+      <button class="btn btn-md btn-secondary" onclick="showToast('default','Draft saved','Your post was saved automatically.')">Saved</button>
+      <button class="btn btn-md btn-secondary" onclick="showToast('success','Post approved!','\"How AI is changing marketing\" was approved and scheduled.')">Approved</button>
+      <button class="btn btn-md btn-secondary" onclick="showToast('error','Publish failed','Reconnect your LinkedIn account and try again.')">Error</button>
+      <button class="btn btn-md btn-secondary" onclick="showToast('warning','Review pending','3 posts need your approval before 8:30 AM.')">Warning</button>
     </div>
   </div>
 </section>
 
 <!-- ─ SKELETON ────────────────────────────────────── -->
 <section class="section" id="sec-skeleton">
-  <div class="section-header"><h1>Skeleton</h1></div>
+  <div class="section-header"><h1>Skeleton</h1><p>Loading state for post cards, Content HUB list and AI generation.</p></div>
   <div class="grid-2">
     <div class="canvas">
-      <div class="block-title">Card skeleton</div>
+      <div class="block-title">Post card skeleton</div>
       <div class="flex items-center gap12" style="margin-bottom:16px">
         <div class="skeleton skel-circle" style="width:40px;height:40px;flex-shrink:0"></div>
         <div style="flex:1"><div class="skeleton skel-text" style="width:60%"></div><div class="skeleton skel-text" style="width:40%;margin-bottom:0"></div></div>
@@ -1351,112 +1344,112 @@ kbd {
 
 <!-- ─ CARD ────────────────────────────────────────── -->
 <section class="section" id="sec-card">
-  <div class="section-header"><h1>Card</h1></div>
+  <div class="section-header"><h1>Card</h1><p>Post Cards — the core unit of the Content HUB. Visual and actions adapt based on content state.</p></div>
   <div class="grid-3">
     <div class="card">
-      <div class="card-header"><p class="card-title">Contrato #1042</p><p class="card-description">Emitido em 10 mar 2024</p></div>
+      <div class="card-header"><p class="card-title">How AI is changing marketing</p><p class="card-description">LinkedIn · Scheduled Mar 28, 9:00 AM</p></div>
       <div class="card-content">
-        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-success">Assinado</span><span class="badge badge-info">Vigente</span></div>
-        <p style="font-size:13px;color:var(--sem-text-subtle)">Contrato de prestação de serviços com renovação anual automática.</p>
+        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-success">Ready to publish</span><span class="tag tag-blue">LinkedIn</span></div>
+        <p style="font-size:13px;color:var(--sem-text-subtle)">3 trends every marketing team needs to know before end of quarter.</p>
       </div>
-      <div class="card-footer"><button class="btn btn-sm btn-primary">Ver detalhes</button><button class="btn btn-sm btn-ghost">Compartilhar</button></div>
+      <div class="card-footer"><button class="btn btn-sm btn-primary">Publish now</button><button class="btn btn-sm btn-ghost">Edit</button></div>
     </div>
     <div class="card">
-      <div class="card-header"><p class="card-title">Proposta Comercial</p><p class="card-description">Atualizada há 2 dias</p></div>
+      <div class="card-header"><p class="card-title">5 mistakes that kill your LinkedIn reach</p><p class="card-description">Created by Rafael Costa · 2 hours ago</p></div>
       <div class="card-content">
-        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-warning">Em análise</span></div>
-        <p style="font-size:13px;color:var(--sem-text-subtle)">Proposta de R$ 48.000 para serviços de consultoria Q2 2024.</p>
+        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-warning">For review</span></div>
+        <p style="font-size:13px;color:var(--sem-text-subtle)">Awaiting approval from Ana Vieira (Content Manager) before going live.</p>
       </div>
-      <div class="card-footer"><button class="btn btn-sm btn-primary">Revisar</button><button class="btn btn-sm btn-ghost">Arquivar</button></div>
+      <div class="card-footer"><button class="btn btn-sm btn-primary">Approve</button><button class="btn btn-sm btn-ghost">Request edit</button></div>
     </div>
     <div class="card">
-      <div class="card-header"><p class="card-title">Relatório Fiscal</p><p class="card-description">Criado hoje</p></div>
+      <div class="card-header"><p class="card-title">Behind the scenes of our product culture</p><p class="card-description">AI-generated · draft</p></div>
       <div class="card-content">
-        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-error">Pendente</span></div>
-        <p style="font-size:13px;color:var(--sem-text-subtle)">Consolidação de notas fiscais do trimestre Q1 2024.</p>
+        <div class="flex items-center gap8" style="margin-bottom:8px"><span class="badge badge-info">Draft</span></div>
+        <p style="font-size:13px;color:var(--sem-text-subtle)">AI suggestion based on your monthly brief. Review before sending for approval.</p>
       </div>
-      <div class="card-footer"><button class="btn btn-sm btn-primary">Completar</button><button class="btn btn-sm btn-ghost">Excluir</button></div>
+      <div class="card-footer"><button class="btn btn-sm btn-primary">Open editor</button><button class="btn btn-sm btn-ghost">Discard</button></div>
     </div>
   </div>
 </section>
 
 <!-- ─ TABS ────────────────────────────────────────── -->
 <section class="section" id="sec-tabs">
-  <div class="section-header"><h1>Tabs</h1></div>
+  <div class="section-header"><h1>Tabs</h1><p>Navigation between Content HUB views and state filters in the editor.</p></div>
   <div class="canvas">
-    <div class="block-title">Underline (padrão)</div>
+    <div class="block-title">Underline — Content HUB</div>
     <div class="tabs-list">
-      <button class="tab-trigger active" onclick="switchDemoTab(this,'dt1')">Visão geral</button>
-      <button class="tab-trigger" onclick="switchDemoTab(this,'dt2')">Documentos</button>
-      <button class="tab-trigger" onclick="switchDemoTab(this,'dt3')">Histórico</button>
-      <button class="tab-trigger" onclick="switchDemoTab(this,'dt4')">Configurações</button>
+      <button class="tab-trigger active" onclick="switchDemoTab(this,'dt1')">All posts</button>
+      <button class="tab-trigger" onclick="switchDemoTab(this,'dt2')">For review</button>
+      <button class="tab-trigger" onclick="switchDemoTab(this,'dt3')">Approved</button>
+      <button class="tab-trigger" onclick="switchDemoTab(this,'dt4')">Published</button>
     </div>
-    <div class="tab-content active" id="dt1"><div class="alert alert-info"><span class="alert-icon">ℹ</span><div>Resumo geral da conta com todos os documentos ativos.</div></div></div>
-    <div class="tab-content" id="dt2"><p style="font-size:13px;color:var(--sem-text-subtle)">42 documentos encontrados. Use os filtros para refinar sua busca.</p></div>
-    <div class="tab-content" id="dt3"><p style="font-size:13px;color:var(--sem-text-subtle)">Nenhuma atividade recente nas últimas 24 horas.</p></div>
-    <div class="tab-content" id="dt4"><p style="font-size:13px;color:var(--sem-text-subtle)">Configurações de perfil e preferências de notificação.</p></div>
+    <div class="tab-content active" id="dt1"><div class="alert alert-info"><span class="alert-icon">ℹ</span><div>Showing all 58 posts in this workspace — use filters to narrow by status, author or channel.</div></div></div>
+    <div class="tab-content" id="dt2"><p style="font-size:13px;color:var(--sem-text-subtle)">7 posts awaiting your approval. Oldest items are highlighted in orange.</p></div>
+    <div class="tab-content" id="dt3"><p style="font-size:13px;color:var(--sem-text-subtle)">23 approved posts ready to schedule or publish immediately.</p></div>
+    <div class="tab-content" id="dt4"><p style="font-size:13px;color:var(--sem-text-subtle)">28 posts published this month. Track engagement in the analytics panel.</p></div>
   </div>
   <div class="canvas" style="margin-top:16px">
-    <div class="block-title">Pill tabs</div>
+    <div class="block-title">Pill — quick filter in editor</div>
     <div style="margin-bottom:20px">
       <div class="tabs-pill">
-        <button class="tab-pill active" onclick="switchPillTab(this,'pt1')">Todos</button>
-        <button class="tab-pill" onclick="switchPillTab(this,'pt2')">Ativos</button>
-        <button class="tab-pill" onclick="switchPillTab(this,'pt3')">Arquivados</button>
+        <button class="tab-pill active" onclick="switchPillTab(this,'pt1')">Content</button>
+        <button class="tab-pill" onclick="switchPillTab(this,'pt2')">AI</button>
+        <button class="tab-pill" onclick="switchPillTab(this,'pt3')">History</button>
       </div>
     </div>
-    <div class="tab-content active" id="pt1"><p style="font-size:13px;color:var(--sem-text-subtle)">Mostrando todos os 58 documentos.</p></div>
-    <div class="tab-content" id="pt2"><p style="font-size:13px;color:var(--sem-text-subtle)">32 documentos ativos.</p></div>
-    <div class="tab-content" id="pt3"><p style="font-size:13px;color:var(--sem-text-subtle)">26 documentos arquivados.</p></div>
+    <div class="tab-content active" id="pt1"><p style="font-size:13px;color:var(--sem-text-subtle)">Edit the post body, add hashtags and configure the publish date.</p></div>
+    <div class="tab-content" id="pt2"><p style="font-size:13px;color:var(--sem-text-subtle)">AI suggestions based on your brief and post history.</p></div>
+    <div class="tab-content" id="pt3"><p style="font-size:13px;color:var(--sem-text-subtle)">Previous versions of this post — click to restore any version.</p></div>
   </div>
 </section>
 
 <!-- ─ ACCORDION ───────────────────────────────────── -->
 <section class="section" id="sec-accordion">
-  <div class="section-header"><h1>Accordion</h1></div>
+  <div class="section-header"><h1>Accordion</h1><p>Onboarding FAQ and collapsible sections in workspace settings.</p></div>
   <div class="accordion" style="max-width:640px">
     <div class="accordion-item">
       <button class="accordion-trigger" onclick="toggleAccordion(this)">
-        Como funciona a assinatura digital?
+        How does the approval workflow work?
         <span class="accordion-icon">⌄</span>
       </button>
-      <div class="accordion-content">A assinatura digital da Isla utiliza criptografia de chave pública (RSA-2048), garantindo autenticidade e integridade ao documento. Cada assinatura é vinculada ao CPF do signatário e possui validade jurídica conforme a MP 2.200-2.</div>
+      <div class="accordion-content">The Creator submits the post for review, which notifies the Content Manager. The manager can approve, reject or request edits with comments. Once approved, the post becomes available to schedule or publish immediately on LinkedIn.</div>
     </div>
     <div class="accordion-item">
       <button class="accordion-trigger open" onclick="toggleAccordion(this)">
-        Quais formatos de arquivo são aceitos?
+        How does the AI generate posts?
         <span class="accordion-icon">⌄</span>
       </button>
-      <div class="accordion-content open">Atualmente suportamos PDF, DOCX, XLSX, PNG e JPG. O tamanho máximo por arquivo é de 50MB. Documentos acima desse limite precisam ser comprimidos antes do upload.</div>
+      <div class="accordion-content open">Isla's AI uses your workspace context — brief, configured tone of voice, post history and industry — to generate relevant suggestions. You can refine, edit and use them as a starting point or publish directly.</div>
     </div>
     <div class="accordion-item">
       <button class="accordion-trigger" onclick="toggleAccordion(this)">
-        Como exportar documentos em lote?
+        What are the possible content states?
         <span class="accordion-icon">⌄</span>
       </button>
-      <div class="accordion-content">Selecione os documentos na lista com o checkbox, clique em "Ações em lote" e escolha "Exportar selecionados". Você receberá um arquivo .zip com todos os documentos.</div>
+      <div class="accordion-content">A post can be in: No status (private), Draft, For review, Approved, Ready to publish or Published. Each state defines who can see it, who can edit it and which actions are available.</div>
     </div>
     <div class="accordion-item">
       <button class="accordion-trigger" onclick="toggleAccordion(this)">
-        Meus dados estão seguros?
+        Who can approve content?
         <span class="accordion-icon">⌄</span>
       </button>
-      <div class="accordion-content">Sim. Todos os dados são criptografados em trânsito (TLS 1.3) e em repouso (AES-256). Nossos servidores estão hospedados na AWS São Paulo com certificações ISO 27001 e SOC 2 Tipo II.</div>
+      <div class="accordion-content">Only users with the Content Manager or Stakeholder/Approver role have access to the review queue. Creators can only see the status and receive feedback, but cannot approve their own posts.</div>
     </div>
   </div>
 </section>
 
 <!-- ─ TABLE ───────────────────────────────────────── -->
 <section class="section" id="sec-table">
-  <div class="section-header"><h1>Table</h1></div>
+  <div class="section-header"><h1>Table</h1><p>Content HUB list view — with status, author, channel, date and bulk actions.</p></div>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Documento</th><th>Tipo</th><th>Status</th><th>Data</th><th>Responsável</th><th></th></tr></thead>
+      <thead><tr><th>Post</th><th>Channel</th><th>Status</th><th>Scheduled</th><th>Author</th><th></th></tr></thead>
       <tbody>
-        <tr><td><strong>Contrato Fornecedor #081</strong></td><td><span class="tag tag-blue">Contrato</span></td><td><span class="badge badge-success">Assinado</span></td><td style="color:var(--sem-text-subtle);font-size:12px">12 mar 2024</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-blue">AV</div><span>Ana Vieira</span></div></td><td><button class="btn btn-sm btn-ghost">Ver</button></td></tr>
-        <tr><td><strong>Proposta Q2 2024</strong></td><td><span class="tag tag-yellow">Proposta</span></td><td><span class="badge badge-warning">Em análise</span></td><td style="color:var(--sem-text-subtle);font-size:12px">10 mar 2024</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-teal">RC</div><span>Rafael Costa</span></div></td><td><button class="btn btn-sm btn-ghost">Ver</button></td></tr>
-        <tr><td><strong>NF-e 004512</strong></td><td><span class="tag tag-green">Fiscal</span></td><td><span class="badge badge-success">Emitida</span></td><td style="color:var(--sem-text-subtle);font-size:12px">08 mar 2024</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-deep">ML</div><span>Marina Lima</span></div></td><td><button class="btn btn-sm btn-ghost">Ver</button></td></tr>
-        <tr><td><strong>Relatório Fiscal Q1</strong></td><td><span class="tag tag-yellow">Relatório</span></td><td><span class="badge badge-error">Pendente</span></td><td style="color:var(--sem-text-subtle);font-size:12px">05 mar 2024</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-blue">JP</div><span>João Paulo</span></div></td><td><button class="btn btn-sm btn-ghost">Ver</button></td></tr>
+        <tr><td><strong>How AI is changing marketing</strong></td><td><span class="tag tag-blue">LinkedIn</span></td><td><span class="badge badge-success">Ready to publish</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Mar 28 · 9:00 AM</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-blue">AV</div><span>Ana Vieira</span></div></td><td><button class="btn btn-sm btn-ghost">View</button></td></tr>
+        <tr><td><strong>5 mistakes that kill your LinkedIn reach</strong></td><td><span class="tag tag-blue">LinkedIn</span></td><td><span class="badge badge-warning">For review</span></td><td style="color:var(--sem-text-subtle);font-size:12px">—</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-teal">RC</div><span>Rafael Costa</span></div></td><td><button class="btn btn-sm btn-ghost">View</button></td></tr>
+        <tr><td><strong>Behind the scenes of our product culture</strong></td><td><span class="tag tag-blue">LinkedIn</span></td><td><span class="badge badge-info">Draft</span></td><td style="color:var(--sem-text-subtle);font-size:12px">—</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-deep">ML</div><span>Marina Lima</span></div></td><td><button class="btn btn-sm btn-ghost">View</button></td></tr>
+        <tr><td><strong>The future of B2B content in 2024</strong></td><td><span class="tag tag-blue">LinkedIn</span></td><td><span class="badge badge-outline">Published</span></td><td style="color:var(--sem-text-subtle);font-size:12px">Mar 25 · 8:00 AM</td><td><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-blue">JP</div><span>João Paulo</span></div></td><td><button class="btn btn-sm btn-ghost">View</button></td></tr>
       </tbody>
     </table>
   </div>
@@ -1464,27 +1457,27 @@ kbd {
 
 <!-- ─ SEPARATOR ───────────────────────────────────── -->
 <section class="section" id="sec-separator">
-  <div class="section-header"><h1>Separator</h1></div>
+  <div class="section-header"><h1>Separator</h1><p>Section dividers in the post editor and settings pages.</p></div>
   <div class="canvas">
-    <p style="font-size:14px">Conteúdo acima do separador</p>
+    <p style="font-size:14px;font-weight:600">Post body</p>
     <hr class="separator">
-    <p style="font-size:14px">Conteúdo abaixo do separador</p>
-    <div class="separator-label">ou</div>
-    <p style="font-size:14px">Conteúdo após separator com label</p>
+    <p style="font-size:14px;font-weight:600">Publishing settings</p>
+    <div class="separator-label">or continue with AI</div>
+    <p style="font-size:14px;color:var(--sem-text-subtle)">Let Isla generate a suggestion based on your brief</p>
   </div>
 </section>
 
 <!-- ─ AVATAR ──────────────────────────────────────── -->
 <section class="section" id="sec-avatar">
-  <div class="section-header"><h1>Avatar</h1></div>
+  <div class="section-header"><h1>Avatar</h1><p>Represents workspace members — creators, managers and approvers.</p></div>
   <div class="canvas">
-    <div class="block-title">Tamanhos</div>
+    <div class="block-title">Sizes</div>
     <div class="demo-row" style="align-items:center;margin-bottom:24px">
       <div class="avatar avatar-sm avatar-blue">AV</div>
       <div class="avatar avatar-md avatar-teal">RC</div>
       <div class="avatar avatar-lg avatar-deep">ML</div>
     </div>
-    <div class="block-title">Avatar Group</div>
+    <div class="block-title">Avatar Group — collaborators</div>
     <div class="avatar-group">
       <div class="avatar avatar-md avatar-blue">AV</div>
       <div class="avatar avatar-md avatar-teal">RC</div>
@@ -1496,65 +1489,66 @@ kbd {
 
 <!-- ─ DIALOG ──────────────────────────────────────── -->
 <section class="section" id="sec-dialog">
-  <div class="section-header"><h1>Dialog / Modal</h1></div>
+  <div class="section-header"><h1>Dialog / Modal</h1><p>Critical workflow actions — edit post, confirm deletion, request review.</p></div>
   <div class="canvas">
-    <div class="block-title">Abrir dialog</div>
+    <div class="block-title">Open dialog</div>
     <div class="demo-row">
-      <button class="btn btn-md btn-primary" onclick="openDialog('dlg-default')">Abrir Dialog</button>
-      <button class="btn btn-md btn-destructive" onclick="openDialog('dlg-danger')">Dialog de Confirmação</button>
+      <button class="btn btn-md btn-primary" onclick="openDialog('dlg-default')">Edit post</button>
+      <button class="btn btn-md btn-destructive" onclick="openDialog('dlg-danger')">Delete post</button>
     </div>
   </div>
 </section>
 <div class="dialog-backdrop" id="dlg-default">
   <div class="dialog">
-    <div class="dialog-header"><div><p class="dialog-title">Editar documento</p><p class="dialog-desc">Faça as alterações necessárias e salve.</p></div><button class="dialog-close" onclick="closeDialog('dlg-default')">✕</button></div>
+    <div class="dialog-header"><div><p class="dialog-title">Edit post</p><p class="dialog-desc">Make your changes and save to continue the approval workflow.</p></div><button class="dialog-close" onclick="closeDialog('dlg-default')">✕</button></div>
     <div class="dialog-body">
-      <div class="field" style="margin-bottom:16px"><label class="field-label">Nome do documento</label><input class="input" value="Contrato Fornecedor #081"></div>
-      <div class="field"><label class="field-label">Tipo</label><select class="select-input input"><option selected>Contrato</option><option>Proposta</option><option>Relatório</option></select></div>
+      <div class="field" style="margin-bottom:16px"><label class="field-label">Internal title</label><input class="input" value="How AI is changing marketing"></div>
+      <div class="field"><label class="field-label">Status</label><select class="select-input input"><option>Draft</option><option selected>For review</option><option>Approved</option></select></div>
     </div>
-    <div class="dialog-footer"><button class="btn btn-md btn-ghost" onclick="closeDialog('dlg-default')">Cancelar</button><button class="btn btn-md btn-primary">Salvar alterações</button></div>
+    <div class="dialog-footer"><button class="btn btn-md btn-ghost" onclick="closeDialog('dlg-default')">Cancel</button><button class="btn btn-md btn-primary">Save changes</button></div>
   </div>
 </div>
 <div class="dialog-backdrop" id="dlg-danger">
   <div class="dialog">
-    <div class="dialog-header"><div><p class="dialog-title">Excluir documento?</p><p class="dialog-desc">Esta ação não pode ser desfeita. O documento será permanentemente removido do sistema.</p></div><button class="dialog-close" onclick="closeDialog('dlg-danger')">✕</button></div>
-    <div class="dialog-body"><div class="alert alert-error"><span class="alert-icon">⚠</span><div>Contrato Fornecedor #081 será excluído.</div></div></div>
-    <div class="dialog-footer"><button class="btn btn-md btn-ghost" onclick="closeDialog('dlg-danger')">Cancelar</button><button class="btn btn-md btn-destructive">Sim, excluir</button></div>
+    <div class="dialog-header"><div><p class="dialog-title">Delete post?</p><p class="dialog-desc">This action cannot be undone. The post will be permanently removed from the Content HUB.</p></div><button class="dialog-close" onclick="closeDialog('dlg-danger')">✕</button></div>
+    <div class="dialog-body"><div class="alert alert-error"><span class="alert-icon">⚠</span><div>"How AI is changing marketing" will be deleted.</div></div></div>
+    <div class="dialog-footer"><button class="btn btn-md btn-ghost" onclick="closeDialog('dlg-danger')">Cancel</button><button class="btn btn-md btn-destructive">Yes, delete</button></div>
   </div>
 </div>
 
 <!-- ─ DRAWER ──────────────────────────────────────── -->
 <section class="section" id="sec-drawer">
-  <div class="section-header"><h1>Drawer</h1></div>
+  <div class="section-header"><h1>Drawer</h1><p>Side panel for post details — opens without leaving the Content HUB list.</p></div>
   <div class="canvas">
-    <div class="block-title">Abrir drawer</div>
-    <button class="btn btn-md btn-primary" onclick="openDrawer()">Abrir Drawer</button>
+    <div class="block-title">Open post panel</div>
+    <button class="btn btn-md btn-primary" onclick="openDrawer()">View post details</button>
   </div>
 </section>
 <div class="drawer-backdrop" id="drawer-bg" onclick="closeDrawer()"></div>
 <div class="drawer" id="drawer-main">
-  <div class="drawer-header"><p class="drawer-title">Detalhes do documento</p><button class="drawer-close" onclick="closeDrawer()">✕</button></div>
+  <div class="drawer-header"><p class="drawer-title">Post details</p><button class="drawer-close" onclick="closeDrawer()">✕</button></div>
   <div class="drawer-body">
-    <div style="margin-bottom:20px"><p class="field-label" style="margin-bottom:8px">Status</p><span class="badge badge-success">Assinado</span></div>
-    <div style="margin-bottom:20px"><p class="field-label" style="margin-bottom:8px">Responsável</p><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-blue">AV</div><span style="font-size:14px">Ana Vieira</span></div></div>
+    <div style="margin-bottom:20px"><p class="field-label" style="margin-bottom:8px">Current status</p><span class="badge badge-warning">For review</span></div>
+    <div style="margin-bottom:20px"><p class="field-label" style="margin-bottom:8px">Author</p><div class="flex items-center gap8"><div class="avatar avatar-sm avatar-teal">RC</div><span style="font-size:14px">Rafael Costa</span></div></div>
+    <div style="margin-bottom:20px"><p class="field-label" style="margin-bottom:8px">Channel</p><span class="tag tag-blue">LinkedIn</span></div>
     <hr class="separator">
-    <div class="field" style="margin-bottom:16px"><label class="field-label">Nome</label><input class="input" value="Contrato Fornecedor #081"></div>
-    <div class="field" style="margin-bottom:16px"><label class="field-label">Observações</label><textarea class="textarea">Renovação automática anual.</textarea></div>
+    <div class="field" style="margin-bottom:16px"><label class="field-label">Title</label><input class="input" value="5 mistakes that kill your LinkedIn reach"></div>
+    <div class="field" style="margin-bottom:16px"><label class="field-label">Note for approver</label><textarea class="textarea" placeholder="Leave a note for the Content Manager..."></textarea></div>
   </div>
-  <div class="drawer-footer"><button class="btn btn-md btn-ghost" onclick="closeDrawer()">Cancelar</button><button class="btn btn-md btn-primary">Salvar</button></div>
+  <div class="drawer-footer"><button class="btn btn-md btn-ghost" onclick="closeDrawer()">Close</button><button class="btn btn-md btn-primary">Send for review</button></div>
 </div>
 
 <!-- ─ TOOLTIP ─────────────────────────────────────── -->
 <section class="section" id="sec-tooltip">
-  <div class="section-header"><h1>Tooltip</h1></div>
+  <div class="section-header"><h1>Tooltip</h1><p>Quick context for actions and states — especially useful in the editor and approval queue.</p></div>
   <div class="canvas">
-    <div class="block-title">Passe o mouse para ver o tooltip</div>
+    <div class="block-title">Hover to reveal</div>
     <div class="demo-row" style="padding-top:30px;padding-bottom:10px">
-      <div class="tooltip-wrap"><button class="btn btn-md btn-primary">Ação principal<span class="tooltip-box">Ctrl + Enter</span></button></div>
-      <div class="tooltip-wrap"><button class="btn btn-md btn-outline">Download<span class="tooltip-box">Baixa o arquivo em PDF</span></button></div>
+      <div class="tooltip-wrap"><button class="btn btn-md btn-primary">Publish now<span class="tooltip-box">Publishes immediately to LinkedIn</span></button></div>
+      <div class="tooltip-wrap"><button class="btn btn-md btn-outline">Schedule<span class="tooltip-box">Choose a date and time to publish</span></button></div>
       <div class="tooltip-wrap"><button class="btn btn-icon btn-ghost">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <span class="tooltip-box">Mais informações sobre este campo</span>
+        <span class="tooltip-box">Private post — only visible to you</span>
       </button></div>
     </div>
   </div>
@@ -1562,23 +1556,23 @@ kbd {
 
 <!-- ─ POPOVER ─────────────────────────────────────── -->
 <section class="section" id="sec-popover">
-  <div class="section-header"><h1>Popover</h1></div>
+  <div class="section-header"><h1>Popover</h1><p>Advanced filters in the Content HUB and contextual actions in the calendar.</p></div>
   <div class="canvas">
-    <div class="block-title">Clique para abrir o popover</div>
+    <div class="block-title">Click to open popover</div>
     <div style="padding-top:16px;padding-bottom:100px">
       <div class="popover-wrap">
         <button class="btn btn-md btn-secondary" onclick="togglePopover('pop1')">
-          Filtros ativos (3)
+          Active filters (3)
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="popover-box" id="pop1">
-          <p class="popover-title">Filtros aplicados</p>
+          <p class="popover-title">Content HUB filters</p>
           <div class="popover-content">
-            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-blue">Contratos</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remover</button></div>
-            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-green">Assinados</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remover</button></div>
-            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-yellow">Março 2024</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remover</button></div>
+            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-blue">LinkedIn</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remove</button></div>
+            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-yellow">For review</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remove</button></div>
+            <div class="flex items-center gap8" style="margin:8px 0"><span class="tag tag-green">Rafael Costa</span><button style="font-size:11px;color:var(--sem-error);background:none;border:none;cursor:pointer">remove</button></div>
             <hr class="separator" style="margin:10px 0">
-            <button class="btn btn-sm btn-ghost" style="width:100%">Limpar todos</button>
+            <button class="btn btn-sm btn-ghost" style="width:100%">Clear all filters</button>
           </div>
         </div>
       </div>
@@ -1588,81 +1582,93 @@ kbd {
 
 <!-- ─ STATS ───────────────────────────────────────── -->
 <section class="section" id="sec-stats">
-  <div class="section-header"><h1>Stat Cards</h1></div>
+  <div class="section-header"><h1>Stat Cards</h1><p>Dashboard metrics — content pipeline, performance and workspace activity.</p></div>
   <div class="grid-3">
-    <div class="stat-card"><div class="stat-label">Documentos totais</div><div class="stat-value">1.482</div><div class="stat-change stat-up"><span>↑</span> +12% este mês</div><div class="stat-line"><div class="stat-line-fill" style="width:72%"></div></div></div>
-    <div class="stat-card"><div class="stat-label">Assinados</div><div class="stat-value">894</div><div class="stat-change stat-up"><span>↑</span> +8% este mês</div><div class="stat-line"><div class="stat-line-fill" style="width:60%;background:var(--sem-success)"></div></div></div>
-    <div class="stat-card"><div class="stat-label">Pendentes</div><div class="stat-value">47</div><div class="stat-change stat-down"><span>↓</span> -3 desde ontem</div><div class="stat-line"><div class="stat-line-fill" style="width:15%;background:var(--sem-warning)"></div></div></div>
-    <div class="stat-card"><div class="stat-label">Usuários ativos</div><div class="stat-value">28</div><div class="stat-change stat-up"><span>↑</span> +4 esta semana</div><div class="stat-line"><div class="stat-line-fill" style="width:45%"></div></div></div>
-    <div class="stat-card"><div class="stat-label">Espaço usado</div><div class="stat-value">14,2 GB</div><div class="stat-change" style="color:var(--sem-text-subtle)">de 50 GB</div><div class="stat-line"><div class="stat-line-fill" style="width:28%"></div></div></div>
-    <div class="stat-card"><div class="stat-label">Erros processamento</div><div class="stat-value">3</div><div class="stat-change stat-down"><span>↓</span> -5 vs semana passada</div><div class="stat-line"><div class="stat-line-fill" style="width:5%;background:var(--sem-error)"></div></div></div>
+    <div class="stat-card"><div class="stat-label">Posts published</div><div class="stat-value">142</div><div class="stat-change stat-up"><span>↑</span> +18% this month</div><div class="stat-line"><div class="stat-line-fill" style="width:72%"></div></div></div>
+    <div class="stat-card"><div class="stat-label">Approval rate</div><div class="stat-value">89%</div><div class="stat-change stat-up"><span>↑</span> +4% vs last month</div><div class="stat-line"><div class="stat-line-fill" style="width:89%;background:var(--sem-success)"></div></div></div>
+    <div class="stat-card"><div class="stat-label">Awaiting review</div><div class="stat-value">7</div><div class="stat-change stat-down"><span>↑</span> +3 today</div><div class="stat-line"><div class="stat-line-fill" style="width:20%;background:var(--sem-warning)"></div></div></div>
+    <div class="stat-card"><div class="stat-label">Active creators</div><div class="stat-value">12</div><div class="stat-change stat-up"><span>↑</span> +2 this week</div><div class="stat-line"><div class="stat-line-fill" style="width:48%"></div></div></div>
+    <div class="stat-card"><div class="stat-label">AI-generated posts</div><div class="stat-value">63</div><div class="stat-change" style="color:var(--sem-text-subtle)">44% of total published</div><div class="stat-line"><div class="stat-line-fill" style="width:44%"></div></div></div>
+    <div class="stat-card"><div class="stat-label">Rejected</div><div class="stat-value">4</div><div class="stat-change stat-down"><span>↓</span> -6 vs last week</div><div class="stat-line"><div class="stat-line-fill" style="width:8%;background:var(--sem-error)"></div></div></div>
   </div>
 </section>
 
 <!-- ─ CHIPS ───────────────────────────────────────── -->
 <section class="section" id="sec-chips">
-  <div class="section-header"><h1>Chip / Kbd</h1></div>
+  <div class="section-header"><h1>Chip / Kbd</h1><p>Quick filters in the Content HUB and keyboard shortcuts in the editor.</p></div>
   <div class="block canvas">
-    <div class="block-title">Chips</div>
+    <div class="block-title">Status filters</div>
     <div class="demo-row" style="flex-wrap:wrap">
-      <span class="chip selected">✓ Contratos</span>
-      <span class="chip" onclick="this.classList.toggle('selected')">Propostas</span>
-      <span class="chip" onclick="this.classList.toggle('selected')">Relatórios</span>
-      <span class="chip" onclick="this.classList.toggle('selected')">Fiscais</span>
-      <span class="chip">Design <span class="chip-remove" onclick="this.parentElement.remove()">×</span></span>
-      <span class="chip">Marketing <span class="chip-remove" onclick="this.parentElement.remove()">×</span></span>
+      <span class="chip selected">✓ For review</span>
+      <span class="chip" onclick="this.classList.toggle('selected')">Approved</span>
+      <span class="chip" onclick="this.classList.toggle('selected')">Drafts</span>
+      <span class="chip" onclick="this.classList.toggle('selected')">Published</span>
+      <span class="chip">LinkedIn <span class="chip-remove" onclick="this.parentElement.remove()">×</span></span>
+      <span class="chip">Rafael Costa <span class="chip-remove" onclick="this.parentElement.remove()">×</span></span>
     </div>
   </div>
   <div class="block canvas" style="margin-top:16px">
-    <div class="block-title">Keyboard shortcuts</div>
+    <div class="block-title">Editor keyboard shortcuts</div>
     <div class="demo-col" style="max-width:320px">
-      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--grey-100)"><span style="font-size:13px">Novo documento</span><div class="flex gap8"><kbd>⌘</kbd><kbd>N</kbd></div></div>
-      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--grey-100)"><span style="font-size:13px">Buscar</span><div class="flex gap8"><kbd>⌘</kbd><kbd>K</kbd></div></div>
-      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0"><span style="font-size:13px">Salvar</span><div class="flex gap8"><kbd>⌘</kbd><kbd>S</kbd></div></div>
+      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--grey-100)"><span style="font-size:13px">New post</span><div class="flex gap8"><kbd>⌘</kbd><kbd>N</kbd></div></div>
+      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--grey-100)"><span style="font-size:13px">Generate with AI</span><div class="flex gap8"><kbd>⌘</kbd><kbd>G</kbd></div></div>
+      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--grey-100)"><span style="font-size:13px">Send for review</span><div class="flex gap8"><kbd>⌘</kbd><kbd>↵</kbd></div></div>
+      <div class="flex" style="justify-content:space-between;align-items:center;padding:8px 0"><span style="font-size:13px">Search HUB</span><div class="flex gap8"><kbd>⌘</kbd><kbd>K</kbd></div></div>
     </div>
   </div>
 </section>
 
 <!-- ─ CODE BLOCK ──────────────────────────────────── -->
 <section class="section" id="sec-code">
-  <div class="section-header"><h1>Code Block</h1></div>
+  <div class="section-header"><h1>Code Block</h1><p>Token and component usage snippets for your React + shadcn/ui project.</p></div>
   <div class="code-block">
-    <button class="code-copy" onclick="copyCode(this)">Copiar</button>
-    <span class="cm">// Isla DS — usando tokens semânticos</span>
-<span class="kw">import</span> <span class="str">'@isla/tokens/dist/css/tokens.css'</span>;
+    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+    <span class="cm">// PostCard — using Isla semantic tokens</span>
+<span class="kw">import</span> { Badge } <span class="kw">from</span> <span class="str">'@/components/ui/badge'</span>;
 
-<span class="kw">const</span> Button = ({ variant = <span class="str">'primary'</span>, size = <span class="str">'md'</span>, children }) => (
-  &lt;button
-    className={<span class="str">`btn btn-${variant} btn-${size}`</span>}
-    style={{
-      background: <span class="str">'var(--sem-fill-hl)'</span>,
-      color: <span class="str">'var(--grey-0)'</span>,
-      borderRadius: <span class="str">'var(--r-md)'</span>,
-    }}
-  &gt;
-    {children}
-  &lt;/button&gt;
+<span class="kw">const</span> STATUS_MAP = {
+  draft:    { label: <span class="str">'Draft'</span>,            variant: <span class="str">'info'</span> },
+  review:   { label: <span class="str">'For review'</span>,       variant: <span class="str">'warning'</span> },
+  approved: { label: <span class="str">'Approved'</span>,         variant: <span class="str">'primary'</span> },
+  ready:    { label: <span class="str">'Ready to publish'</span>, variant: <span class="str">'success'</span> },
+  posted:   { label: <span class="str">'Published'</span>,        variant: <span class="str">'outline'</span> },
+};
+
+<span class="kw">export const</span> PostCard = ({ post }) => (
+  &lt;div style={{ background: <span class="str">'var(--sem-fill)'</span>, border: <span class="str">'1px solid var(--sem-border)'</span>, borderRadius: <span class="str">'var(--r-lg)'</span> }}&gt;
+    &lt;Badge variant={STATUS_MAP[post.status].variant}&gt;
+      {STATUS_MAP[post.status].label}
+    &lt;/Badge&gt;
+    &lt;p style={{ fontSize: <span class="str">'var(--text-medium-sb-size)'</span> }}&gt;{post.title}&lt;/p&gt;
+  &lt;/div&gt;
 );
   </div>
   <div class="code-block" style="margin-top:12px">
-    <button class="code-copy" onclick="copyCode(this)">Copiar</button>
-    <span class="cm">/* CSS Tokens — cole em globals.css */</span>
+    <button class="code-copy" onclick="copyCode(this)">Copy</button>
+    <span class="cm">/* globals.css — Isla tokens ready for shadcn/ui */</span>
 <span class="kw">:root</span> {
-  --isla-500: <span class="str">#0381A2</span>;
-  --sem-fill-hl: <span class="str">#08BEED</span>;
-  --sem-border: <span class="str">#E2E8F0</span>;
-  --r-md: <span class="str">8px</span>;
-  --r-pill: <span class="str">999px</span>;
-  --spacing-4x: <span class="str">16px</span>;
+  <span class="cm">/* Primary brand */</span>
+  --primary: <span class="str">var(--isla-500)</span>;        <span class="cm">/* #0381A2 */</span>
+  --primary-foreground: <span class="str">var(--grey-0)</span>;
+  <span class="cm">/* Content states */</span>
+  --status-draft:    <span class="str">var(--isla-25)</span>;
+  --status-review:   <span class="str">#FEF3C7</span>;
+  --status-approved: <span class="str">var(--isla-100)</span>;
+  --status-ready:    <span class="str">#DCFCE7</span>;
+  --status-posted:   <span class="str">var(--grey-100)</span>;
+  <span class="cm">/* Typography */</span>
+  --font-sans: <span class="str">'Segoe UI', system-ui, sans-serif</span>;
+  --radius: <span class="str">var(--r-md)</span>;
 }
   </div>
 </section>
 
 </main>
+</main>
 
 <!-- TOAST CONTAINER -->
 <div class="toast-container" id="toast-container"></div>
-<div id="copy-toast">Copiado!</div>
+<div id="copy-toast">Copied!</div>
 
 <script>
 // ── Navigation ──────────────────────────────────────────
@@ -1831,16 +1837,16 @@ function dismissToast(el) {
 function copyHex(hex) {
   navigator.clipboard.writeText(hex).catch(()=>{});
   const t = document.getElementById('copy-toast');
-  t.textContent = 'Copiado: ' + hex;
+  t.textContent = 'Copied: ' + hex;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 1800);
 }
 function copyCode(btn) {
   const block = btn.parentElement;
-  const text = block.textContent.replace('Copiar','').trim();
+  const text = block.textContent.replace('Copy','').trim();
   navigator.clipboard.writeText(text).catch(()=>{});
-  btn.textContent = 'Copiado!';
-  setTimeout(() => btn.textContent = 'Copiar', 2000);
+  btn.textContent = 'Copied!';
+  setTimeout(() => btn.textContent = 'Copy', 2000);
 }
 </script>
 </body>
